@@ -1,0 +1,292 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: #0f1117;
+  color: #e1e4e8;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #161822;
+  border-bottom: 1px solid #2d3148;
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 16px;
+  color: #8b949e;
+}
+
+.app-error {
+  color: #f85149;
+}
+
+/* ---- Status Filter ---- */
+
+.status-filter {
+  display: flex;
+  gap: 8px;
+}
+
+.status-filter button {
+  padding: 4px 12px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background: transparent;
+  color: #8b949e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.status-filter button:hover {
+  border-color: #58a6ff;
+  color: #c9d1d9;
+}
+
+.status-filter button.active {
+  background: #1f2937;
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+/* ---- Graph View ---- */
+
+.graph-view {
+  flex: 1;
+}
+
+.react-flow__node {
+  font-size: 13px;
+}
+
+/* ---- Custom Node ---- */
+
+.task-node {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #30363d;
+  background: #1c2028;
+  min-width: 180px;
+  max-width: 240px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-node:hover {
+  border-color: #58a6ff;
+}
+
+.task-node.critical {
+  border-color: #f0883e;
+  box-shadow: 0 0 8px rgba(240, 136, 62, 0.3);
+}
+
+.task-node.dimmed {
+  opacity: 0.3;
+}
+
+.task-node .node-id {
+  font-size: 11px;
+  color: #8b949e;
+  margin-bottom: 4px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", monospace;
+}
+
+.task-node .node-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e1e4e8;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.task-node .node-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.task-node .node-status.pending {
+  background: #2d333b;
+  color: #8b949e;
+}
+
+.task-node .node-status.in_progress {
+  background: #0d419d;
+  color: #79c0ff;
+}
+
+.task-node .node-status.completed {
+  background: #1b4721;
+  color: #56d364;
+}
+
+.task-node .node-status.blocked {
+  background: #5a1e23;
+  color: #f85149;
+}
+
+/* ---- Node Drawer ---- */
+
+.node-drawer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.node-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.node-drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 340px;
+  background: #161822;
+  border-left: 1px solid #2d3148;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 11;
+}
+
+.node-drawer h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e1e4e8;
+  margin-bottom: 16px;
+  padding-right: 32px;
+}
+
+.node-drawer .drawer-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #8b949e;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.node-drawer .drawer-close:hover {
+  color: #e1e4e8;
+}
+
+.drawer-field {
+  margin-bottom: 14px;
+}
+
+.drawer-field dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+
+.drawer-field dd {
+  font-size: 14px;
+  color: #c9d1d9;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", monospace;
+}
+
+.drawer-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.drawer-badge.critical {
+  background: #5a2d0c;
+  color: #f0883e;
+}
+
+.drawer-badge.not-critical {
+  background: #2d333b;
+  color: #8b949e;
+}
+
+/* ---- React Flow Overrides ---- */
+
+.react-flow__edge-path {
+  stroke: #30363d;
+  stroke-width: 2;
+}
+
+.react-flow__edge.critical .react-flow__edge-path {
+  stroke: #f0883e;
+  stroke-width: 3;
+}
+
+.react-flow__background {
+  background: #0f1117;
+}
+
+.react-flow__controls {
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: #1c2028;
+  border-bottom: 1px solid #30363d;
+  fill: #8b949e;
+}
+
+.react-flow__controls-button:hover {
+  background: #2d3148;
+}
+
+.react-flow__minimap {
+  background: #161822;
+  border: 1px solid #2d3148;
+  border-radius: 8px;
+}
