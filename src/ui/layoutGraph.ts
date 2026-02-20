@@ -24,10 +24,6 @@ export function layoutGraph(
 
   for (const [waveIndex, nodeIds] of waves) {
     const x = PADDING_X + waveIndex * COLUMN_WIDTH;
-    // Center nodes vertically in the wave column
-    const totalHeight = (nodeIds.length - 1) * ROW_HEIGHT;
-    const startY = PADDING_Y + (graph.nodes.length * ROW_HEIGHT - totalHeight) / 2 - (graph.nodes.length * ROW_HEIGHT) / 2 + PADDING_Y;
-
     nodeIds.forEach((id, i) => {
       positions.set(id, {
         x,

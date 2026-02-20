@@ -8,8 +8,6 @@ import type { Graph, GraphEdge, GraphNode } from "./graph.js";
  * with live issue status later.
  */
 export function toGraph(plan: LoomPlan): Graph {
-  const criticalSet = new Set(plan.critical_path);
-
   const nodes: GraphNode[] = Object.values(plan.tasks).map((t) => ({
     id: t.task_id,
     title: t.title,
