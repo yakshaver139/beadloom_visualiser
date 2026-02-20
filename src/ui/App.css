@@ -87,6 +87,41 @@ body,
   color: #58a6ff;
 }
 
+/* ---- Upload Section ---- */
+
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background: transparent;
+  color: #8b949e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.upload-button:hover {
+  border-color: #58a6ff;
+  color: #c9d1d9;
+}
+
+.upload-button.uploading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.upload-error {
+  font-size: 12px;
+  color: #f85149;
+}
+
 /* ---- Graph View ---- */
 
 .graph-view {
