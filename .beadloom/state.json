@@ -1,0 +1,58 @@
+{
+  "plan_id": "loom-2026-02-20-124957",
+  "started_at": "2026-02-20T12:49:57.476925Z",
+  "status": "completed",
+  "current_wave": 0,
+  "total_waves": 4,
+  "total_tasks": 6,
+  "sessions": {
+    "bvis-o3t.1": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.1",
+      "branch": "beadloom/bvis-o3t.1",
+      "started_at": "2026-02-20T12:49:58.212461Z",
+      "finished_at": "2026-02-20T12:53:01.508102Z",
+      "log_file": ".worktrees/bvis-o3t.1/beadloom.log"
+    },
+    "bvis-o3t.2": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.2",
+      "branch": "beadloom/bvis-o3t.2",
+      "started_at": "2026-02-20T12:53:03.627552Z",
+      "finished_at": "2026-02-20T12:55:38.768639Z",
+      "log_file": ".worktrees/bvis-o3t.2/beadloom.log"
+    },
+    "bvis-o3t.3": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.3",
+      "branch": "beadloom/bvis-o3t.3",
+      "started_at": "2026-02-20T12:53:03.363498Z",
+      "finished_at": "2026-02-20T12:59:09.490848Z",
+      "log_file": ".worktrees/bvis-o3t.3/beadloom.log"
+    },
+    "bvis-o3t.4": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.4",
+      "branch": "beadloom/bvis-o3t.4",
+      "started_at": "2026-02-20T12:55:40.286009Z",
+      "finished_at": "2026-02-20T12:59:03.403579Z",
+      "log_file": ".worktrees/bvis-o3t.4/beadloom.log"
+    },
+    "bvis-o3t.5": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.5",
+      "branch": "beadloom/bvis-o3t.5",
+      "started_at": "2026-02-20T12:59:11.306653Z",
+      "finished_at": "2026-02-20T13:08:10.106095Z",
+      "log_file": ".worktrees/bvis-o3t.5/beadloom.log"
+    },
+    "bvis-o3t.6": {
+      "status": "completed",
+      "worktree": ".worktrees/bvis-o3t.6",
+      "branch": "beadloom/bvis-o3t.6",
+      "started_at": "2026-02-20T13:08:12.014103Z",
+      "finished_at": "2026-02-20T13:14:50.807986Z",
+      "log_file": ".worktrees/bvis-o3t.6/beadloom.log"
+    }
+  }
+}
