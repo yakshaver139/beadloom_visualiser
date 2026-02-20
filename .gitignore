@@ -12,3 +12,6 @@
 .worktrees/bvis-o3t.5/
 # bd worktree
 .worktrees/bvis-o3t.6/
+node_modules/
+dist/
+*.log
